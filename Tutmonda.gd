@@ -26,10 +26,3 @@ func _notification(what):
 
 func _ready():
 	Agordejo.load(agordejo)
-
-func get_layer_bit (korpo, bit):
-	if korpo is KinematicBody2D or korpo is Area2D or\
-	korpo is StaticBody2D:
-		return korpo.get_collision_mask_bit(bit)
-	elif korpo is TileMap:  #-- NOTE: Automatically converted by Godot 2 to 3 converter, please review
-		return korpo.get_collision_layer_bit(bit)

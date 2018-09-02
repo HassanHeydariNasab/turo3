@@ -32,6 +32,6 @@ func _on_Kasxi_tween_complete( objekto, klavo ):
 	queue_free()
 
 func _on_Materialo_area_enter( areo ):
-	if T.get_layer_bit(areo, 1) == true:
+	if areo.get_collision_layer_bit(1) == true:
 		queue_free()
 
