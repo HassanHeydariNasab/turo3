@@ -1,0 +1,37 @@
+[application]
+
+config/icon = "res://ikono.png"
+config/name = "turo"
+run/main_scene = "res://Komenco.tscn"
+
+[autoload]
+
+T = "*res://Tutmonda.gd"
+
+[display]
+
+window/handheld/orientation = "portrait"
+window/size/height = 1000
+window/size/width = 600
+window/stretch/aspect = "keep_width"
+window/stretch/mode = "viewport"
+
+[importer_defaults]
+
+texture = {
+"flags/filter": true,
+"flags/mipmaps": true
+}
+
+[locale]
+
+translations = [ "res://Tradukoj/Traduko.eo.translation", "res://Tradukoj/Traduko.en.translation" ]
+
+[physics]
+
+common/physics_fps = 40
+
+[rendering]
+
+environment/default_clear_color = Color( 1, 1, 1, 1 )
+

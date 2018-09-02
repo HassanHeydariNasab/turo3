@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/192634__samulis__chimes-c3-pp-1.ogg-a882ce698113deb89dc5c6f08e951ad3.oggstr"
+
+[deps]
+
+source_file="res://Sonoj/chimes/192634__samulis__chimes-c3-pp-1.ogg"
+dest_files=[ "res://.import/192634__samulis__chimes-c3-pp-1.ogg-a882ce698113deb89dc5c6f08e951ad3.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

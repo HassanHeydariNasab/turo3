@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/374487__samulis__viola-section-tremolo-f-3-violas-trem-g2-v2-rr1.ogg-f33e5a03de3a2b8ad4e272c90c35f394.oggstr"
+
+[deps]
+
+source_file="res://Sonoj/tremolo/374487__samulis__viola-section-tremolo-f-3-violas-trem-g2-v2-rr1.ogg"
+dest_files=[ "res://.import/374487__samulis__viola-section-tremolo-f-3-violas-trem-g2-v2-rr1.ogg-f33e5a03de3a2b8ad4e272c90c35f394.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

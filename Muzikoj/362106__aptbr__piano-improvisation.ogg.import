@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/362106__aptbr__piano-improvisation.ogg-8f4ba47d1c4aae052593998fd2764821.oggstr"
+
+[deps]
+
+source_file="res://Muzikoj/362106__aptbr__piano-improvisation.ogg"
+dest_files=[ "res://.import/362106__aptbr__piano-improvisation.ogg-8f4ba47d1c4aae052593998fd2764821.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
