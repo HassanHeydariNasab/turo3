@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/373946__samulis__timpani-rolls-e3-timpani4-roll-v5-rr1-sum.ogg-2b2db26e2fd94b944d9be757dac4241a.oggstr"
+
+[deps]
+
+source_file="res://Sounds/timpani/373946__samulis__timpani-rolls-e3-timpani4-roll-v5-rr1-sum.ogg"
+dest_files=[ "res://.import/373946__samulis__timpani-rolls-e3-timpani4-roll-v5-rr1-sum.ogg-2b2db26e2fd94b944d9be757dac4241a.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -1,37 +1,46 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=3
+
 [application]
 
-config/icon = "res://ikono.png"
-config/name = "turo"
-run/main_scene = "res://Komenco.tscn"
+config/name="turo3"
+run/main_scene="res://Init.tscn"
+config/icon="res://icon.png"
 
 [autoload]
 
-T = "*res://Tutmonda.gd"
+G="*res://Global.gd"
 
 [display]
 
-window/handheld/orientation = "portrait"
-window/size/height = 1000
-window/size/width = 600
-window/stretch/aspect = "keep_width"
-window/stretch/mode = "viewport"
+window/size/width=600
+window/size/height=1000
+window/handheld/orientation="portrait"
+window/stretch/mode="viewport"
+window/stretch/aspect="keep_width"
 
 [importer_defaults]
 
-texture = {
+texture={
 "flags/filter": true,
 "flags/mipmaps": true
 }
 
 [locale]
 
-translations = [ "res://Tradukoj/Traduko.eo.translation", "res://Tradukoj/Traduko.en.translation" ]
+translations=PoolStringArray( "res://Translations/Translations.en.translation", "res://Translations/Translations.eo.translation" )
 
 [physics]
 
-common/physics_fps = 40
+common/physics_fps=40
 
 [rendering]
 
-environment/default_clear_color = Color( 1, 1, 1, 1 )
-
+environment/default_clear_color=Color( 1, 1, 1, 1 )

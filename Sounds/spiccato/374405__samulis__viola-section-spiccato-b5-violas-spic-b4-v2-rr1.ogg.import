@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/374405__samulis__viola-section-spiccato-b5-violas-spic-b4-v2-rr1.ogg-17d4a27456fc9a677945a52c8670d041.oggstr"
+
+[deps]
+
+source_file="res://Sounds/spiccato/374405__samulis__viola-section-spiccato-b5-violas-spic-b4-v2-rr1.ogg"
+dest_files=[ "res://.import/374405__samulis__viola-section-spiccato-b5-violas-spic-b4-v2-rr1.ogg-17d4a27456fc9a677945a52c8670d041.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

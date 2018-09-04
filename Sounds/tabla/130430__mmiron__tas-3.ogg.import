@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/130430__mmiron__tas-3.ogg-59f4f21b8bb1cdbc45903236f0e748f5.oggstr"
+
+[deps]
+
+source_file="res://Sounds/tabla/130430__mmiron__tas-3.ogg"
+dest_files=[ "res://.import/130430__mmiron__tas-3.ogg-59f4f21b8bb1cdbc45903236f0e748f5.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

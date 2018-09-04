@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/130428__mmiron__na-sharp.ogg-e94427beb9307232ebbb1ff886ea521a.oggstr"
+
+[deps]
+
+source_file="res://Sounds/tabla/130428__mmiron__na-sharp.ogg"
+dest_files=[ "res://.import/130428__mmiron__na-sharp.ogg-e94427beb9307232ebbb1ff886ea521a.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

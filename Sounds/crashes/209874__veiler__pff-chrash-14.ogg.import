@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/209874__veiler__pff-chrash-14.ogg-34d68b9b1443ee6e8580f51bfbb9ad1b.oggstr"
+
+[deps]
+
+source_file="res://Sounds/crashes/209874__veiler__pff-chrash-14.ogg"
+dest_files=[ "res://.import/209874__veiler__pff-chrash-14.ogg-34d68b9b1443ee6e8580f51bfbb9ad1b.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

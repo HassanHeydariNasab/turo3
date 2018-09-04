@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/130404__mmiron__ghe-3.ogg-b424d964dece89cf14150c1911919b74.oggstr"
+
+[deps]
+
+source_file="res://Sounds/tabla/130404__mmiron__ghe-3.ogg"
+dest_files=[ "res://.import/130404__mmiron__ghe-3.ogg-b424d964dece89cf14150c1911919b74.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

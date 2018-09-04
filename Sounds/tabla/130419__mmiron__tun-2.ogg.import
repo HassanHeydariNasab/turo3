@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/130419__mmiron__tun-2.ogg-60a7ebdc68a323e98f9f92e1c0473b9a.oggstr"
+
+[deps]
+
+source_file="res://Sounds/tabla/130419__mmiron__tun-2.ogg"
+dest_files=[ "res://.import/130419__mmiron__tun-2.ogg-60a7ebdc68a323e98f9f92e1c0473b9a.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

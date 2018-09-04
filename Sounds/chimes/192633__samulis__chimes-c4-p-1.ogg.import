@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/192633__samulis__chimes-c4-p-1.ogg-417d8a046ea12c6245041fc6103ac6ef.oggstr"
+
+[deps]
+
+source_file="res://Sounds/chimes/192633__samulis__chimes-c4-p-1.ogg"
+dest_files=[ "res://.import/192633__samulis__chimes-c4-p-1.ogg-417d8a046ea12c6245041fc6103ac6ef.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0
