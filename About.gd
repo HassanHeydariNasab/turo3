@@ -9,7 +9,7 @@ func _on_Fontkodo_pressed():
 	OS.shell_open("https://github.com/HassanHeydariNasab/turo3")
 
 func _on_Atribuoj_pressed():
-	OS.shell_open("https://github.com/HassanHeydariNasab/turo3/blob/master/ATTRIBUTION.md")
+	OS.shell_open("https://github.com/HassanHeydariNasab/turo3/blob/master/ATTRIBUTIONS.md")
 
 func _on_Bitcoin_pressed():
 	OS.shell_open("bitcoin:1PUJ5sFWxvbx5Np2CjFmhHFnzPe2GPvinj")
