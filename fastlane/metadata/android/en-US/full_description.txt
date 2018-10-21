@@ -1,0 +1,7 @@
+Build a tower as tall as possible.
+
+''This game is ported from Godot Game Engine v2.1.x to v3.0.x
+and source code is translated to English.''
+
+''old package: '' [[ir.hsn6.turo]]
+.
