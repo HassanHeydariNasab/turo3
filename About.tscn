@@ -9,10 +9,7 @@
 [ext_resource path="res://Fonts/roboto.font" type="BitmapFont" id=7]
 [ext_resource path="res://Sounds/tabla/130428__mmiron__na-sharp.ogg" type="AudioStream" id=8]
 
-
-
-
-[node name="About" type="Control"]
+[node name="About" type="Control" index="0"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -74,9 +71,9 @@ anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
 margin_left = 60.0
-margin_top = -40.0
+margin_top = -90.0
 margin_right = 746.0
-margin_bottom = 131.0
+margin_bottom = 81.0
 rect_scale = Vector2( 0.7, 0.7 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -108,9 +105,9 @@ anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
 margin_left = 60.0
-margin_top = 120.0
+margin_top = 70.0
 margin_right = 746.0
-margin_bottom = 291.0
+margin_bottom = 241.0
 rect_scale = Vector2( 0.7, 0.7 )
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
@@ -178,7 +175,7 @@ size_flags_vertical = 1
 
 [node name="BG" type="Polygon2D" parent="Donation" index="0"]
 
-polygon = PoolVector2Array( 0, 700, 600, 700, 600, 940, 0, 940 )
+polygon = PoolVector2Array( 0, 630, 600, 630, 600, 940, 0, 940 )
 uv = PoolVector2Array(  )
 color = Color( 0.129412, 0.129412, 0.129412, 1 )
 vertex_colors = PoolColorArray(  )
@@ -219,7 +216,35 @@ group = null
 text = "bitcoin:1PUJ5sFWxvbx5Np2CjFmhHFnzPe2GPvinj"
 underline = 2
 
-[node name="Litecoin" type="LinkButton" parent="Donation" index="2"]
+[node name="Liberapay" type="LinkButton" parent="Donation" index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = 20.0
+margin_top = 680.0
+margin_right = 1443.0
+margin_bottom = 759.0
+rect_scale = Vector2( 0.38, 0.38 )
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 2
+size_flags_horizontal = 1
+size_flags_vertical = 1
+custom_fonts/font = ExtResource( 7 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 0.960784, 0.960784, 0.960784, 1 )
+custom_colors/font_color_pressed = Color( 0.878431, 0.878431, 0.878431, 1 )
+toggle_mode = false
+enabled_focus_mode = 0
+shortcut = null
+group = null
+text = "https://liberapay.com/hsn6"
+underline = 2
+
+[node name="Litecoin" type="LinkButton" parent="Donation" index="3"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -247,7 +272,7 @@ group = null
 text = "litecoin:LgeGeVU9JAxyXpanPtsBRAX5QHxvUJo8id"
 underline = 2
 
-[node name="Ethereum" type="LinkButton" parent="Donation" index="3"]
+[node name="Ethereum" type="LinkButton" parent="Donation" index="4"]
 
 anchor_left = 0.0
 anchor_top = 0.0
@@ -275,15 +300,15 @@ group = null
 text = "ethereum:0x8472eb39e5bddd14173bce4ed06e287876fb2f2c"
 underline = 2
 
-[node name="Label" type="Label" parent="Donation" index="4"]
+[node name="Label" type="Label" parent="Donation" index="5"]
 
 anchor_left = 0.0
 anchor_top = 0.0
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 620.0
+margin_top = 540.0
 margin_right = 600.0
-margin_bottom = 700.0
+margin_bottom = 620.0
 rect_pivot_offset = Vector2( 0, 0 )
 rect_clip_content = false
 mouse_filter = 1
@@ -313,6 +338,8 @@ bus = "Master"
 [connection signal="pressed" from="Back" to="." method="_on_Reen_pressed"]
 
 [connection signal="pressed" from="Donation/Bitcoin" to="." method="_on_Bitcoin_pressed"]
+
+[connection signal="pressed" from="Donation/Liberapay" to="." method="_on_Liberapay_pressed"]
 
 [connection signal="pressed" from="Donation/Litecoin" to="." method="_on_Litecoin_pressed"]
 
