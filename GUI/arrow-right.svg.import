@@ -2,18 +2,19 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/button.png-61e62dbc137372932f6851c8ecb5801f.stex"
+path="res://.import/arrow-right.svg-9717cee5bcb6c8af73ecfea4bc2e4684.stex"
 
 [deps]
 
-source_file="res://GUI/button.png"
-dest_files=[ "res://.import/button.png-61e62dbc137372932f6851c8ecb5801f.stex" ]
+source_file="res://GUI/arrow-right.svg"
+dest_files=[ "res://.import/arrow-right.svg-9717cee5bcb6c8af73ecfea4bc2e4684.stex" ]
 
 [params]
 
 compress/mode=0
 compress/lossy_quality=0.7
 compress/hdr_mode=0
+compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
 flags/filter=true
@@ -23,6 +24,7 @@ flags/srgb=2
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/HDR_as_SRGB=false
+process/invert_color=false
 stream=false
 size_limit=0
 detect_3d=true

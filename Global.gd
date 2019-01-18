@@ -10,11 +10,10 @@ var Main = null
 var colors = {
 	"Red":"E53935", "Amber":"FFB300",
 	"Green":"43A047", "Blue":"1E88E5",
-	"Violet":"8E24AA", "Gray":"616161",
+	"Violet":"8E24AA",
 	"Black":"000000", "White":"ffffff",
-	"Multicolor":"616161"
 }
-var multicolors = ["Red", "Amber", "Green", "Blue", "Violet", "Gray"]
+var colors_order = ["Red", "Amber", "Green", "Blue", "Violet"]
 
 func _notification(what):
 	if what == MainLoop.NOTIFICATION_WM_QUIT_REQUEST:

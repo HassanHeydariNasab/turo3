@@ -90,9 +90,7 @@ func _ready():
 	look_Record.set_text(
 		str(G.Settings.get_value("Record", "record","0"))+"m"
 	)
-	BG.set_color(
-		G.colors[G.Settings.get_value("color", "bgcolor", "Gray")]
-	)
+	BG.set_color(G.colors[G.colors_order[0]])
 	color = G.colors[G.Settings.get_value("color", "color", "Black")]
 	var Infinity = $Infinity
 	Infinity.set_global_position(Vector2(0,-101300))  #-- NOTE: Automatically converted by Godot 2 to 3 converter, please review
@@ -190,7 +188,7 @@ func _input(event):
 						PrePart.hide()
 						Growth_sound.stop()
 						self.ink += consumed_ink/2
-		
+
 		elif event.button_index == BUTTON_WHEEL_UP:
 			V_ScrollBar.set_value(V_ScrollBar.get_value()-100)
 		elif event.button_index == BUTTON_WHEEL_DOWN:

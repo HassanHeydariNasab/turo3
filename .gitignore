@@ -5,3 +5,5 @@ fastlane/metadata/android/en-US/images/phoneScreenshots/*.import
 # System/tool-specific ignores
 .directory
 *~
+
+build/

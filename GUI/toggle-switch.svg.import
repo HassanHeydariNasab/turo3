@@ -2,18 +2,19 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/multicolor_pressed.png-f85aef0845a1e7db834db4b899477823.stex"
+path="res://.import/toggle-switch.svg-16f492b04ec90e85be1beaca1213bc22.stex"
 
 [deps]
 
-source_file="res://GUI/multicolor_pressed.png"
-dest_files=[ "res://.import/multicolor_pressed.png-f85aef0845a1e7db834db4b899477823.stex" ]
+source_file="res://GUI/toggle-switch.svg"
+dest_files=[ "res://.import/toggle-switch.svg-16f492b04ec90e85be1beaca1213bc22.stex" ]
 
 [params]
 
 compress/mode=0
 compress/lossy_quality=0.7
 compress/hdr_mode=0
+compress/bptc_ldr=0
 compress/normal_map=0
 flags/repeat=0
 flags/filter=true
@@ -23,6 +24,7 @@ flags/srgb=2
 process/fix_alpha_border=true
 process/premult_alpha=false
 process/HDR_as_SRGB=false
+process/invert_color=false
 stream=false
 size_limit=0
 detect_3d=true
