@@ -1,9 +1,9 @@
 extends Node
 
 var settings_file = "user://settings.cfg"
-onready var Settings = ConfigFile.new()
+var Settings = ConfigFile.new()
 
-var is_language_selected = false
+var is_language_selected = true
 
 var Main = null
 

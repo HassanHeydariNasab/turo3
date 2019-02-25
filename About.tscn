@@ -1,10 +1,9 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://About.gd" type="Script" id=1]
 [ext_resource path="res://Fonts/jomhuria.font" type="BitmapFont" id=2]
 [ext_resource path="res://Fonts/roboto.font" type="BitmapFont" id=3]
-[ext_resource path="res://Sounds/tabla/130428__mmiron__na-sharp.ogg" type="AudioStream" id=4]
-[ext_resource path="res://GUI/back.png" type="Texture" id=5]
+[ext_resource path="res://GUI/back.png" type="Texture" id=4]
 
 [sub_resource type="StyleBoxEmpty" id=1]
 
@@ -18,31 +17,31 @@
 [sub_resource type="StyleBoxEmpty" id=4]
 
 
-[sub_resource type="StyleBoxEmpty" id=9]
+[sub_resource type="StyleBoxEmpty" id=5]
 
 
-[sub_resource type="StyleBoxEmpty" id=10]
+[sub_resource type="StyleBoxEmpty" id=6]
 
 
-[sub_resource type="StyleBoxEmpty" id=11]
+[sub_resource type="StyleBoxEmpty" id=7]
 
 
-[sub_resource type="StyleBoxEmpty" id=12]
+[sub_resource type="StyleBoxEmpty" id=8]
 
 
-[sub_resource type="StyleBoxFlat" id=5]
+[sub_resource type="StyleBoxFlat" id=9]
 
 bg_color = Color( 0.741176, 0.741176, 0.741176, 1 )
 
-[sub_resource type="StyleBoxFlat" id=6]
+[sub_resource type="StyleBoxFlat" id=10]
 
 bg_color = Color( 0.458824, 0.458824, 0.458824, 1 )
 
-[sub_resource type="StyleBoxFlat" id=7]
+[sub_resource type="StyleBoxFlat" id=11]
 
 bg_color = Color( 0.741176, 0.741176, 0.741176, 1 )
 
-[sub_resource type="StyleBoxEmpty" id=8]
+[sub_resource type="StyleBoxEmpty" id=12]
 
 
 [node name="About" type="Control"]
@@ -63,7 +62,7 @@ mouse_filter = 1
 size_flags_vertical = 0
 custom_fonts/font = ExtResource( 2 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "v2.0.0"
+text = "v3.0.0"
 valign = 1
 
 [node name="Code" type="Button" parent="."]
@@ -90,14 +89,14 @@ anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
 margin_left = 150.0
-margin_top = 80.0
+margin_top = 30.0
 margin_right = 579.0
-margin_bottom = 223.0
+margin_bottom = 173.0
 rect_scale = Vector2( 0.7, 0.7 )
-custom_styles/hover = SubResource( 9 )
-custom_styles/pressed = SubResource( 10 )
-custom_styles/focus = SubResource( 11 )
-custom_styles/normal = SubResource( 12 )
+custom_styles/hover = SubResource( 5 )
+custom_styles/pressed = SubResource( 6 )
+custom_styles/focus = SubResource( 7 )
+custom_styles/normal = SubResource( 8 )
 custom_fonts/font = ExtResource( 2 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color_hover = Color( 0.741176, 0.741176, 0.741176, 1 )
@@ -114,8 +113,8 @@ margin_right = 40.0
 margin_bottom = -480.0
 
 [node name="BG" type="Polygon2D" parent="Donation"]
-polygon = PoolVector2Array( 0, 630, 600, 630, 600, 940, 0, 940 )
 color = Color( 0.129412, 0.129412, 0.129412, 1 )
+polygon = PoolVector2Array( 0, 630, 600, 630, 600, 940, 0, 940 )
 
 [node name="Bitcoin" type="LinkButton" parent="Donation"]
 margin_left = 20.0
@@ -170,24 +169,20 @@ text = "ethereum:0x8472eb39e5bddd14173bce4ed06e287876fb2f2c"
 underline = 2
 
 [node name="Label" type="Label" parent="Donation"]
-margin_top = 540.0
+margin_top = 530.0
 margin_right = 600.0
-margin_bottom = 620.0
+margin_bottom = 630.0
 mouse_filter = 1
 size_flags_vertical = 0
 custom_fonts/font = ExtResource( 2 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 0.776471, 0.776471, 0.776471, 1 )
 text = "Donation"
 align = 1
 valign = 1
 
-[node name="Enter_sound" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 4 )
-volume_db = 5.0
-
 [node name="BG_top" type="Polygon2D" parent="."]
-polygon = PoolVector2Array( 0, 0, 0, 70, 600, 70, 600, 0 )
 color = Color( 0, 0, 0, 1 )
+polygon = PoolVector2Array( 0, 0, 0, 70, 600, 70, 600, 0 )
 
 [node name="Title" type="Label" parent="BG_top"]
 anchor_left = 0.5
@@ -209,11 +204,11 @@ margin_left = 530.0
 margin_right = 670.0
 margin_bottom = 140.0
 rect_scale = Vector2( 0.5, 0.5 )
-custom_styles/hover = SubResource( 5 )
-custom_styles/pressed = SubResource( 6 )
-custom_styles/focus = SubResource( 7 )
-custom_styles/normal = SubResource( 8 )
-icon = ExtResource( 5 )
+custom_styles/hover = SubResource( 9 )
+custom_styles/pressed = SubResource( 10 )
+custom_styles/focus = SubResource( 11 )
+custom_styles/normal = SubResource( 12 )
+icon = ExtResource( 4 )
 
 [connection signal="pressed" from="Code" to="." method="_on_Code_pressed"]
 [connection signal="pressed" from="Attributions" to="." method="_on_Attributions_pressed"]

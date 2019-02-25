@@ -2,7 +2,6 @@ extends Control
 
 
 func _ready():
-	$Enter_sound.set("playing", G.Settings.get_value("Settings", "Sounds", true))
 	if not G.is_language_selected:
 		get_tree().set_auto_accept_quit(false)
 

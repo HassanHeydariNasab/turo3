@@ -20,7 +20,7 @@ modules="org/godotengine/godot/GodotPaymentV3"
 [application]
 
 config/name="turo3"
-run/main_scene="res://Init.tscn"
+run/main_scene="res://Menu.tscn"
 config/icon="res://icon.png"
 config/quit_on_go_back=false
 boot_splash/auto_accept_quit=true

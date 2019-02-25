@@ -22,7 +22,7 @@ func _ready():
 	iap.connect("consume_success", self, "on_consume_success")
 	iap.connect("consume_fail", self, "on_consume_fail")
 	iap.connect("sku_details_complete", self, "on_sku_details_complete")
-	$Record.set_text(
+	$Form/Record.set_text(
 		str(G.Settings.get_value("Record", "record","0"))+"m"
 	)
 	fetch()
@@ -32,6 +32,12 @@ func _ready():
 			is_cafebazaar_installed = true
 		else:
 			is_cafebazaar_installed = false
+	if G.Settings.get_value('Record', 'is_submitted', false):
+		Form.show()
+		Result_already_submitted.hide()
+	else:
+		Form.hide()
+		Result_already_submitted.show()
 
 
 
@@ -108,7 +114,7 @@ func _on_Consume_pressed():
 
 func submit():
 	var headers = ['Content-Type: application/json']
-	var query = JSON.print({'country': 'IR', 'name': $Name.get_text(), 'value': G.Settings.get_value("Record", "record", 0)})
+	var query = JSON.print({'country': 'IR', 'name': $Form/Name.get_text(), 'value': G.Settings.get_value("Record", "record", 0)})
 	$HTTPRequest_Submit.request(SERVER+'/v1/scores', headers, false, HTTPClient.METHOD_POST, query)
 
 
@@ -118,12 +124,16 @@ func fetch():
 		[], false, HTTPClient.METHOD_GET
 	)
 
-
+onready var Result_already_submitted = $Result_already_submitted
+onready var Form = $Form
 func _on_HTTPRequest_Submit_request_completed( result, response_code, headers, body ):
 	print(response_code)
 	if response_code == 201:
 #		var json = JSON.parse(body.get_string_from_utf8())
 		fetch()
+		Result_already_submitted.show()
+		Form.hide()
+		G.Settings.set_value('Record', 'is_submitted', true)
 	else:
 		pass
 
@@ -140,6 +150,8 @@ func _on_HTTPRequest_Fetch_request_completed(result, response_code, headers, bod
 			ScoreList_index.add_item(str(skip+score_index+1), null, false)
 			ScoreList_name.add_item(scores[score_index]['name'], null, false)
 			ScoreList_value.add_item(str(scores[score_index]['value'])+'m', null, false)
+	elif response_code == 0:
+		pass
 	else:
 		pass
 

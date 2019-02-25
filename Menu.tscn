@@ -1,8 +1,7 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Menu.gd" type="Script" id=1]
 [ext_resource path="res://Fonts/jomhuria.font" type="BitmapFont" id=2]
-[ext_resource path="res://Sounds/tabla/130428__mmiron__na-sharp.ogg" type="AudioStream" id=3]
 
 [sub_resource type="StyleBoxEmpty" id=1]
 
@@ -124,10 +123,6 @@ custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color_hover = Color( 0.741176, 0.741176, 0.741176, 1 )
 custom_colors/font_color_pressed = Color( 0.458824, 0.458824, 0.458824, 1 )
 text = "Exit"
-
-[node name="Enter_sound" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 3 )
-volume_db = 5.0
 
 [connection signal="pressed" from="Play" to="." method="_on_Play_pressed"]
 [connection signal="pressed" from="Settings" to="." method="_on_Settings_pressed"]

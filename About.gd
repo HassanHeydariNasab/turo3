@@ -1,9 +1,6 @@
 extends Control
 
 
-func _ready():
-	$Enter_sound.set("playing", G.Settings.get_value("audio", "sounds", true))
-
 func _on_Code_pressed():
 	OS.shell_open("https://github.com/HassanHeydariNasab/turo3")
 

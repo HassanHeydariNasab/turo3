@@ -47,7 +47,7 @@ border_blend = true
 bg_color = Color( 0.835294, 0, 0.976471, 1 )
 border_blend = true
 
-[sub_resource type="StyleBoxFlat" id=10]
+[sub_resource type="StyleBoxFlat" id=5]
 
 bg_color = Color( 0.129412, 0.129412, 0.129412, 1 )
 
@@ -66,19 +66,19 @@ bg_color = Color( 0.741176, 0.741176, 0.741176, 1 )
 [sub_resource type="StyleBoxEmpty" id=9]
 
 
-[sub_resource type="StyleBoxFlat" id=11]
+[sub_resource type="StyleBoxFlat" id=10]
 
 bg_color = Color( 0.741176, 0.741176, 0.741176, 1 )
 
-[sub_resource type="StyleBoxFlat" id=12]
+[sub_resource type="StyleBoxFlat" id=11]
 
 bg_color = Color( 0.458824, 0.458824, 0.458824, 1 )
 
-[sub_resource type="StyleBoxFlat" id=13]
+[sub_resource type="StyleBoxFlat" id=12]
 
 bg_color = Color( 0.741176, 0.741176, 0.741176, 1 )
 
-[sub_resource type="StyleBoxEmpty" id=14]
+[sub_resource type="StyleBoxEmpty" id=13]
 
 
 [node name="Main" type="Node2D"]
@@ -89,8 +89,8 @@ show_behind_parent = true
 position = Vector2( 0, -1100 )
 z_index = -1
 z_as_relative = false
-polygon = PoolVector2Array( 630, -1720, -30, -1720, -30, 2140, 640, 2140 )
 color = Color( 0, 0, 0, 1 )
+polygon = PoolVector2Array( 630, -1720, -30, -1720, -30, 2140, 640, 2140 )
 
 [node name="Change" type="Tween" parent="BG"]
 
@@ -125,8 +125,8 @@ visible = false
 collision_layer = 0
 
 [node name="Look" type="Polygon2D" parent="PrePart"]
-polygon = PoolVector2Array( 10, -10, -10, -10, -10, 10, 10, 10 )
 color = Color( 0, 0, 0, 1 )
+polygon = PoolVector2Array( 10, -10, -10, -10, -10, 10, 10, 10 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PrePart"]
 shape = SubResource( 1 )
@@ -142,8 +142,8 @@ shape = SubResource( 2 )
 
 [node name="Look" type="Polygon2D" parent="Ground"]
 position = Vector2( 0, -80 )
-polygon = PoolVector2Array( -1810, 950, 1890, 950, 1890, 20000, -1810, 20000 )
 color = Color( 0, 0, 0, 1 )
+polygon = PoolVector2Array( -1810, 950, 1890, 950, 1890, 20000, -1810, 20000 )
 
 [node name="T500" type="Timer" parent="."]
 wait_time = 0.5
@@ -168,8 +168,8 @@ max_value = -300.0
 value = -300.0
 
 [node name="BG_top" type="Polygon2D" parent="Canvas"]
-polygon = PoolVector2Array( 0, 0, 0, 70, 600, 70, 600, 0 )
 color = Color( 0.129412, 0.129412, 0.129412, 1 )
+polygon = PoolVector2Array( 0, 0, 0, 70, 600, 70, 600, 0 )
 
 [node name="look_Ink" type="ProgressBar" parent="Canvas"]
 margin_right = 450.0
@@ -177,7 +177,7 @@ margin_bottom = 79.0
 rect_scale = Vector2( 1, 0.885 )
 mouse_filter = 1
 custom_styles/fg = SubResource( 4 )
-custom_styles/bg = SubResource( 10 )
+custom_styles/bg = SubResource( 5 )
 custom_fonts/font = ExtResource( 2 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 max_value = 1000.0
@@ -251,10 +251,10 @@ margin_left = 530.0
 margin_right = 670.0
 margin_bottom = 140.0
 rect_scale = Vector2( 0.5, 0.5 )
-custom_styles/hover = SubResource( 11 )
-custom_styles/pressed = SubResource( 12 )
-custom_styles/focus = SubResource( 13 )
-custom_styles/normal = SubResource( 14 )
+custom_styles/hover = SubResource( 10 )
+custom_styles/pressed = SubResource( 11 )
+custom_styles/focus = SubResource( 12 )
+custom_styles/normal = SubResource( 13 )
 icon = ExtResource( 4 )
 
 [node name="BG_music" type="AudioStreamPlayer" parent="."]
