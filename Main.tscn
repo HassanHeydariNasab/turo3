@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=2]
+[gd_scene load_steps=44 format=2]
 
 [ext_resource path="res://Main.gd" type="Script" id=1]
 [ext_resource path="res://Fonts/jomhuria.font" type="BitmapFont" id=2]
@@ -20,66 +20,55 @@
 [ext_resource path="res://Sounds/timpani/373946__samulis__timpani-rolls-e3-timpani4-roll-v5-rr1-sum.ogg" type="AudioStream" id=18]
 [ext_resource path="res://Sounds/chimes/192634__samulis__chimes-c3-pp-1.ogg" type="AudioStream" id=19]
 [ext_resource path="res://Sounds/chimes/192633__samulis__chimes-c4-p-1.ogg" type="AudioStream" id=20]
-[ext_resource path="res://Sounds/crashes/209874__veiler__pff-chrash-14.ogg" type="AudioStream" id=21]
-[ext_resource path="res://Sounds/136893__bowmans-last-words__coming-down.ogg" type="AudioStream" id=22]
-[ext_resource path="res://Sounds/389724__uminari__rolling-rocks-06.ogg" type="AudioStream" id=23]
-[ext_resource path="res://Sounds/tabla/130404__mmiron__ghe-3.ogg" type="AudioStream" id=24]
-[ext_resource path="res://Sounds/tabla/130416__mmiron__tun.ogg" type="AudioStream" id=25]
-[ext_resource path="res://Sounds/tabla/130419__mmiron__tun-2.ogg" type="AudioStream" id=26]
-[ext_resource path="res://Sounds/tabla/130430__mmiron__tas-3.ogg" type="AudioStream" id=27]
-[ext_resource path="res://Sounds/tabla/130428__mmiron__na-sharp.ogg" type="AudioStream" id=28]
+[ext_resource path="res://Sounds/drums/209874__veiler__pff-chrash-14.ogg" type="AudioStream" id=21]
+[ext_resource path="res://Sounds/drums/465832__joesh2__hit-6.ogg" type="AudioStream" id=22]
+[ext_resource path="res://Sounds/136893__bowmans-last-words__coming-down.ogg" type="AudioStream" id=23]
+[ext_resource path="res://Sounds/389724__uminari__rolling-rocks-06.ogg" type="AudioStream" id=24]
+[ext_resource path="res://Sounds/tabla/130404__mmiron__ghe-3.ogg" type="AudioStream" id=25]
+[ext_resource path="res://Sounds/tabla/130416__mmiron__tun.ogg" type="AudioStream" id=26]
+[ext_resource path="res://Sounds/tabla/130419__mmiron__tun-2.ogg" type="AudioStream" id=27]
+[ext_resource path="res://Sounds/tabla/130430__mmiron__tas-3.ogg" type="AudioStream" id=28]
+[ext_resource path="res://Sounds/tabla/130428__mmiron__na-sharp.ogg" type="AudioStream" id=29]
+[ext_resource path="res://Sounds/pizzicato/374517__samulis__violin-section-pizzicato-d6-vlnens-pizz-d5-v1-rr2.ogg" type="AudioStream" id=30]
 
 [sub_resource type="RectangleShape2D" id=1]
 
-
 [sub_resource type="RectangleShape2D" id=2]
-
 extents = Vector2( 20000, 10 )
 
 [sub_resource type="StyleBoxFlat" id=3]
-
 content_margin_top = 60.0
 bg_color = Color( 0.270588, 0.352941, 0.392157, 1 )
 border_blend = true
 
 [sub_resource type="StyleBoxFlat" id=4]
-
 bg_color = Color( 0.835294, 0, 0.976471, 1 )
 border_blend = true
 
 [sub_resource type="StyleBoxFlat" id=5]
-
 bg_color = Color( 0.129412, 0.129412, 0.129412, 1 )
 
 [sub_resource type="StyleBoxFlat" id=6]
-
 bg_color = Color( 0.741176, 0.741176, 0.741176, 1 )
 
 [sub_resource type="StyleBoxFlat" id=7]
-
 bg_color = Color( 0.458824, 0.458824, 0.458824, 1 )
 
 [sub_resource type="StyleBoxFlat" id=8]
-
 bg_color = Color( 0.741176, 0.741176, 0.741176, 1 )
 
 [sub_resource type="StyleBoxEmpty" id=9]
 
-
 [sub_resource type="StyleBoxFlat" id=10]
-
 bg_color = Color( 0.741176, 0.741176, 0.741176, 1 )
 
 [sub_resource type="StyleBoxFlat" id=11]
-
 bg_color = Color( 0.458824, 0.458824, 0.458824, 1 )
 
 [sub_resource type="StyleBoxFlat" id=12]
-
 bg_color = Color( 0.741176, 0.741176, 0.741176, 1 )
 
 [sub_resource type="StyleBoxEmpty" id=13]
-
 
 [node name="Main" type="Node2D"]
 script = ExtResource( 1 )
@@ -112,13 +101,13 @@ text = "Here is the end of infinity"
 align = 1
 valign = 1
 
+[node name="Dividers" type="Node2D" parent="."]
+
 [node name="Parts" type="Node2D" parent="."]
 
 [node name="Inks" type="Node2D" parent="."]
 
 [node name="Rectangles" type="Node2D" parent="."]
-
-[node name="Dividers" type="Node2D" parent="."]
 
 [node name="PrePart" type="Area2D" parent="."]
 visible = false
@@ -183,6 +172,19 @@ custom_colors/font_color = Color( 1, 1, 1, 1 )
 max_value = 1000.0
 value = 100.0
 percent_visible = false
+
+[node name="Label" type="Label" parent="Canvas/look_Ink"]
+visible = false
+margin_right = 750.0
+margin_bottom = 132.0
+rect_scale = Vector2( 0.6, 0.6 )
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "X2"
+align = 1
+valign = 1
+
+[node name="Increase" type="Tween" parent="Canvas/look_Ink"]
 
 [node name="look_Record" type="Label" parent="Canvas"]
 margin_left = 320.0
@@ -316,33 +318,41 @@ volume_db = 24.0
 
 [node name="C4_chimes" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 20 )
-volume_db = 20.0
+volume_db = 5.0
 
 [node name="Crash_14" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 21 )
 volume_db = 5.0
 
-[node name="Growth_sound" type="AudioStreamPlayer" parent="."]
+[node name="Hit_6" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 22 )
+volume_db = 10.0
+
+[node name="Growth_sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 23 )
 
 [node name="Divider_sound" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 23 )
+stream = ExtResource( 24 )
 volume_db = 8.0
 
 [node name="Ink5_sound" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 24 )
-
-[node name="Ink4_sound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 25 )
 
-[node name="Ink3_sound" type="AudioStreamPlayer" parent="."]
+[node name="Ink4_sound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 26 )
 
-[node name="Ink2_sound" type="AudioStreamPlayer" parent="."]
+[node name="Ink3_sound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 27 )
 
-[node name="Ink1_sound" type="AudioStreamPlayer" parent="."]
+[node name="Ink2_sound" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 28 )
+
+[node name="Ink1_sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 29 )
+
+[node name="D6_pizzicato" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 30 )
+volume_db = 1.0
 
 [connection signal="tween_completed" from="BG/Change" to="." method="_on_BG_Change_tween_completed"]
 [connection signal="body_entered" from="PrePart" to="." method="_on_PrePart_body_entered"]

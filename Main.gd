@@ -6,6 +6,7 @@ onready var BG = $BG
 onready var Ground = $Ground
 onready var V_ScrollBar = $Canvas/V_ScrollBar
 onready var look_Ink = $Canvas/look_Ink
+onready var look_Ink_Increase = $Canvas/look_Ink/Increase
 onready var look_Height = $Canvas/look_Height
 onready var look_Record = $Canvas/look_Record
 onready var look_Record_Change = $Canvas/look_Record/Change
@@ -33,6 +34,7 @@ onready var E3_timpani = $E3_timpani
 onready var C3_chimes = $C3_chimes
 onready var C4_chimes = $C4_chimes
 onready var Crash_14 = $Crash_14
+onready var Hit_6 = $Hit_6
 onready var Growth_sound  = $Growth_sound
 onready var Divider_sound  = $Divider_sound
 onready var Ink1_sound  = $Ink1_sound
@@ -40,6 +42,7 @@ onready var Ink2_sound  = $Ink2_sound
 onready var Ink3_sound  = $Ink3_sound
 onready var Ink4_sound  = $Ink4_sound
 onready var Ink5_sound  = $Ink5_sound
+onready var D6_pizzicato = $D6_pizzicato
 #onready var FPS = $Canvas/FPS
 onready var Part = preload("res://Part.tscn")
 onready var Ink = preload("res://Ink.tscn")
@@ -51,7 +54,7 @@ var height = 0 setget set_height
 func set_height(value):
 	if value*0.1184 >= height:
 		height = round(value*0.1184)
-		V_ScrollBar.set_value(-value-100)
+		V_ScrollBar.set_value(-value-300)
 		look_Height.set_text(str(height)+"m")
 		if height > G.Settings.get_value("Record", "record",0):
 			$BG_music.set_volume_db(5)
@@ -68,8 +71,12 @@ func set_height(value):
 
 var ink setget set_ink
 func set_ink(value):
+	look_Ink_Increase.interpolate_property(
+		look_Ink, 'value', ink, value, 0.2, Tween.TRANS_QUAD, Tween.EASE_OUT
+	)
 	ink = int(value)
-	look_Ink.set_value(ink)
+	look_Ink_Increase.start()
+#	look_Ink.set_value(ink)
 
 var octave = 3
 
