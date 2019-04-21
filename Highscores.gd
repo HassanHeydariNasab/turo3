@@ -33,11 +33,11 @@ func _ready():
 		else:
 			is_cafebazaar_installed = false
 	if G.Settings.get_value('Record', 'is_submitted', false):
-		Form.show()
-		Result_already_submitted.hide()
-	else:
 		Form.hide()
 		Result_already_submitted.show()
+	else:
+		Form.show()
+		Result_already_submitted.hide()
 
 
 
@@ -90,11 +90,14 @@ func on_sku_details_complete():
 
 func _on_Submit_pressed():
 	if OS.get_name() == 'Android' and is_cafebazaar_installed:
+#	if OS.get_name() == 'Android':
+		print('request')
 		iap.request_purchased()
-		print('b')
 	else:
+		print('else')
 		submit()
 
+# for debug only
 func _on_Consume_pressed():
 	if OS.get_name() == 'Android' and is_cafebazaar_installed:
 		iap.consume(SKU)
@@ -134,6 +137,7 @@ func _on_HTTPRequest_Submit_request_completed( result, response_code, headers, b
 		Result_already_submitted.show()
 		Form.hide()
 		G.Settings.set_value('Record', 'is_submitted', true)
+		G.Settings.save(G.settings_file)
 	else:
 		pass
 

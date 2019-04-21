@@ -56,6 +56,7 @@ func set_height(value):
 		if height > G.Settings.get_value("Record", "record",0):
 			$BG_music.set_volume_db(5)
 			G.Settings.set_value("Record", "record", height)
+			G.Settings.set_value("Record", "is_submitted", false)
 			G.Settings.save(G.settings_file)
 			look_Record.set_text(
 				str(G.Settings.get_value("Record", "record",0))+"m"
