@@ -64,7 +64,6 @@ func set_height(value):
 			look_Record.set_text(
 				str(G.Settings.get_value("Record", "record",0))+"m"
 			)
-			look_Record_Change.seek(0)
 			look_Record_Change.resume_all()
 		else:
 			BG_music.set_volume_db(0)
@@ -119,7 +118,7 @@ func _ready():
 		randomize()
 		var Ink_ = Ink.instance()
 		var ink_ = int(rand_range(50,200))
-		Ink_.ink = ink_/2.5
+		Ink_.ink = ink_/2.85
 		Ink_.set_scale(Vector2(ink_/50, ink_/50))
 		Ink_.set_global_position(  #-- NOTE: Automatically converted by Godot 2 to 3 converter, please review
 			Vector2(rand_range(300-ink_,300+ink_),

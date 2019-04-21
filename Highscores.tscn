@@ -275,6 +275,7 @@ icon = ExtResource( 4 )
 flat = true
 
 [node name="Previous" type="Button" parent="."]
+visible = false
 margin_left = 250.0
 margin_top = 555.0
 margin_right = 350.0

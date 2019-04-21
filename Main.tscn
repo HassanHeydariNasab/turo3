@@ -204,6 +204,8 @@ align = 2
 valign = 1
 
 [node name="Change" type="Tween" parent="Canvas/look_Record"]
+repeat = true
+playback/repeat = true
 
 [node name="look_Height" type="Label" parent="Canvas"]
 margin_left = 390.0

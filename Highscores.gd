@@ -12,6 +12,10 @@ onready var ScoreList_index = $ScoreList_index
 onready var ScoreList_name = $ScoreList_name
 onready var ScoreList_value = $ScoreList_value
 
+onready var Next = $Next
+onready var Previous = $Previous
+
+
 func _ready():
 	iap.set_auto_consume(false)
 	iap.connect("purchase_success", self, "on_purchase_success")
@@ -166,6 +170,7 @@ func _on_Back_pressed():
 
 func _on_Next_pressed():
 	skip += LIMIT
+	Previous.show()
 	fetch()
 
 
