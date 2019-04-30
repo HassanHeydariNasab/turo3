@@ -6,13 +6,25 @@
 ;   [section] ; section goes between []
 ;   param=value ; assign values to parameters
 
-config_version=3
+config_version=4
+
+_global_script_classes=[  ]
+_global_script_class_icons={
+
+}
+
+[android]
+
+modules="org/godotengine/godot/GodotPaymentV3"
 
 [application]
 
 config/name="turo3"
-run/main_scene="res://Init.tscn"
+run/main_scene="res://Menu.tscn"
 config/icon="res://icon.png"
+config/quit_on_go_back=false
+boot_splash/auto_accept_quit=true
+boot_splash/quit_on_go_back=false
 
 [autoload]
 
@@ -43,4 +55,6 @@ common/physics_fps=40
 
 [rendering]
 
+quality/driver/driver_name="GLES2"
+vram_compression/import_etc=true
 environment/default_clear_color=Color( 1, 1, 1, 1 )

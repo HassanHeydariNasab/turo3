@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/465832__joesh2__hit-6.ogg-e7dd81502ddc9cea8c54b5f01762fdc2.oggstr"
+
+[deps]
+
+source_file="res://Sounds/drums/465832__joesh2__hit-6.ogg"
+dest_files=[ "res://.import/465832__joesh2__hit-6.ogg-e7dd81502ddc9cea8c54b5f01762fdc2.oggstr" ]
+
+[params]
+
+loop=false
+loop_offset=0

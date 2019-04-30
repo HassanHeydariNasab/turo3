@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/roboto.sv.png-7bda5e8ba0f636d044fc5ac9be39acd4.stex"
+path="res://.import/circle.png-8ec0bcae207a734fdeb9d3a74d0a224c.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Fonts/roboto.sv.png"
-dest_files=[ "res://.import/roboto.sv.png-7bda5e8ba0f636d044fc5ac9be39acd4.stex" ]
+source_file="res://Images/circle.png"
+dest_files=[ "res://.import/circle.png-8ec0bcae207a734fdeb9d3a74d0a224c.stex" ]
 
 [params]
 

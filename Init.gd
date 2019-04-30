@@ -7,3 +7,4 @@ func _ready():
 	else:
 		G.is_language_selected = true
 		get_tree().change_scene("res://Menu.tscn")
+	

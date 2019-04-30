@@ -13,12 +13,13 @@ func _on_Divider_body_entered( body ):
 	for Part_ in Parts_:
 		Part_.queue_free()
 	G.Main.Ground.set_global_position(Vector2(300,get_global_position().y-880))  #-- NOTE: Automatically converted by Godot 2 to 3 converter, please review
-	if G.Settings.get_value("color", "bgcolor", "Gray") == "Multicolor":
-		G.Main.BG_Change.interpolate_property(G.Main.BG, "color",
-			G.Main.BG.get_color(),
-			Color(G.colors[G.multicolors[G.Main.bgcolor]]), 0.3,
-			Tween.TRANS_QUAD, Tween.EASE_IN)
-		G.Main.BG_Change.start()
-		G.Main.bgcolor = (G.Main.bgcolor+1) % G.multicolors.size()
-	queue_free()
 
+	G.Main.bgcolor = (G.Main.bgcolor+1) % G.colors_order.size()
+	G.Main.BG_Change.interpolate_property(
+		G.Main.BG, "color",
+		G.Main.BG.get_color(),
+		Color(G.colors[G.colors_order[G.Main.bgcolor]]), 0.3,
+		Tween.TRANS_QUAD, Tween.EASE_IN
+	)
+	G.Main.BG_Change.start()
+	queue_free()

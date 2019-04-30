@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/roboto.sv.png-7bda5e8ba0f636d044fc5ac9be39acd4.stex"
+path="res://.import/arrow-right.svg-9717cee5bcb6c8af73ecfea4bc2e4684.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Fonts/roboto.sv.png"
-dest_files=[ "res://.import/roboto.sv.png-7bda5e8ba0f636d044fc5ac9be39acd4.stex" ]
+source_file="res://GUI/arrow-right.svg"
+dest_files=[ "res://.import/arrow-right.svg-9717cee5bcb6c8af73ecfea4bc2e4684.stex" ]
 
 [params]
 

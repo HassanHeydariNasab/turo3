@@ -23,3 +23,7 @@ https://freesound.org/people/bowmans%20last%20words/sounds/136893/
 https://freesound.org/people/mmiron/packs/8162
 
 https://freesound.org/people/Uminari/sounds/389724/
+
+https://freesound.org/people/Samulis/sounds/374517/
+
+https://freesound.org/people/joesh2/sounds/465832/
