@@ -29,7 +29,6 @@ boot_splash/quit_on_go_back=false
 [autoload]
 
 G="*res://Global.gd"
-iap="*res://iap.gd"
 
 [display]
 

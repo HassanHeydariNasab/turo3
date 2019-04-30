@@ -48,22 +48,6 @@ size_flags_horizontal = 2
 size_flags_vertical = 2
 script = ExtResource( 1 )
 
-[node name="Consume" type="Button" parent="."]
-visible = false
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-margin_left = -300.0
-margin_top = -445.0
-margin_right = 200.0
-margin_bottom = -295.0
-rect_scale = Vector2( 0.5, 0.5 )
-size_flags_horizontal = 2
-size_flags_vertical = 2
-custom_fonts/font = ExtResource( 2 )
-text = "Consume"
-
 [node name="Form" type="Control" parent="."]
 anchor_left = 0.5
 anchor_top = 1.0
@@ -284,7 +268,6 @@ rect_rotation = 180.0
 icon = ExtResource( 4 )
 flat = true
 
-[connection signal="pressed" from="Consume" to="." method="_on_Consume_pressed"]
 [connection signal="pressed" from="Form/Submit" to="." method="_on_Submit_pressed"]
 [connection signal="request_completed" from="HTTPRequest_Submit" to="." method="_on_HTTPRequest_Submit_request_completed"]
 [connection signal="request_completed" from="HTTPRequest_Fetch" to="." method="_on_HTTPRequest_Fetch_request_completed"]

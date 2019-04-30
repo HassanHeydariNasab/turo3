@@ -2,8 +2,6 @@
 extends Control
 
 const SERVER = 'https://nishe.ir/poento'
-const SKU = 'item_test'
-var is_cafebazaar_installed = false
 
 var skip = 0
 const LIMIT = 6
@@ -17,25 +15,10 @@ onready var Previous = $Previous
 
 
 func _ready():
-	iap.set_auto_consume(false)
-	iap.connect("purchase_success", self, "on_purchase_success")
-	iap.connect("purchase_fail", self, "on_purchase_fail")
-	iap.connect("purchase_cancel", self, "on_purchase_cancel")
-	iap.connect("purchase_owned", self, "on_purchase_owned")
-	iap.connect("has_purchased", self, "on_has_purchased")
-	iap.connect("consume_success", self, "on_consume_success")
-	iap.connect("consume_fail", self, "on_consume_fail")
-	iap.connect("sku_details_complete", self, "on_sku_details_complete")
 	$Form/Record.set_text(
 		str(G.Settings.get_value("Record", "record","0"))+"m"
 	)
 	fetch()
-	if OS.get_name() == 'Android':
-		var test_cafebazaar = OS.shell_open('bazaar://login')
-		if test_cafebazaar == OK:
-			is_cafebazaar_installed = true
-		else:
-			is_cafebazaar_installed = false
 	if G.Settings.get_value('Record', 'is_submitted', false):
 		Form.hide()
 		Result_already_submitted.show()
@@ -44,79 +27,8 @@ func _ready():
 		Result_already_submitted.hide()
 
 
-
-func on_purchase_success(item_name):
-	# alert.set_text("Purchase success : " + item_name)
-	# alert.popup()
-	print('purchase successed')
-	submit()
-
-func on_purchase_fail():
-	# alert.set_text("Purchase fail")
-	# alert.popup()
-	print('purchase failed')
-
-func on_purchase_cancel():
-	# alert.set_text("Purchase cancel")
-	# alert.popup()
-	print('purchase canceled')
-
-func on_purchase_owned(item_name):
-	# alert.set_text("Purchase owned : " + item_name)
-	# alert.popup()
-	print('owned')
-
-func on_has_purchased(item_name):
-	if item_name == null:
-		# alert.set_text("Don't have purchased item")
-		print('nothing')
-		iap.purchase(SKU)
-	else:
-		# alert.set_text("Has purchased : " + item_name)
-		if SKU in item_name:
-			submit()
-		else:
-			print('not found')
-			iap.purchase(SKU)
-
-func on_consume_success(item_name):
-	print("Consume success : " + item_name)
-#	pass
-
-func on_consume_fail():
-	print("Try to request purchased first")
-#	pass
-
-func on_sku_details_complete():
-	# alert.set_text("Got detail info : " + to_json(iap.sku_details[SKU]))
-	# alert.popup()
-	print(to_json(iap.sku_details[SKU]))
-
 func _on_Submit_pressed():
-	if OS.get_name() == 'Android' and is_cafebazaar_installed:
-#	if OS.get_name() == 'Android':
-		print('request')
-		iap.request_purchased()
-	else:
-		print('else')
-		submit()
-
-# for debug only
-func _on_Consume_pressed():
-	if OS.get_name() == 'Android' and is_cafebazaar_installed:
-		iap.consume(SKU)
-
-# func button_purchase():
-# 	iap.purchase(SKU)
-
-# func button_consume():
-# 	iap.consume(SKU)
-
-# func button_request():
-# 	iap.request_purchased()
-
-# func button_query():
-# 	iap.sku_details_query([SKU, "item_test_b"])
+	submit()
 
 
 func submit():
@@ -130,6 +42,7 @@ func fetch():
 		SERVER+'/v1/scores?skip='+str(skip)+'&limit='+str(LIMIT),
 		[], false, HTTPClient.METHOD_GET
 	)
+
 
 onready var Result_already_submitted = $Result_already_submitted
 onready var Form = $Form
