@@ -1,15 +1,19 @@
 [remap]
 
-importer="ogg_vorbis"
-type="AudioStreamOGGVorbis"
-path="res://.import/130404__mmiron__ghe-3.ogg-b424d964dece89cf14150c1911919b74.oggstr"
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dcnlqt5jmyj8e"
+path="res://.godot/imported/130404__mmiron__ghe-3.ogg-b424d964dece89cf14150c1911919b74.oggvorbisstr"
 
 [deps]
 
 source_file="res://Sounds/tabla/130404__mmiron__ghe-3.ogg"
-dest_files=[ "res://.import/130404__mmiron__ghe-3.ogg-b424d964dece89cf14150c1911919b74.oggstr" ]
+dest_files=["res://.godot/imported/130404__mmiron__ghe-3.ogg-b424d964dece89cf14150c1911919b74.oggvorbisstr"]
 
 [params]
 
 loop=false
 loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

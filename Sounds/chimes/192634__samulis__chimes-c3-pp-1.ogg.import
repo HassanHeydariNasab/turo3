@@ -1,15 +1,19 @@
 [remap]
 
-importer="ogg_vorbis"
-type="AudioStreamOGGVorbis"
-path="res://.import/192634__samulis__chimes-c3-pp-1.ogg-4811ec68841433267f0ec02e09f0b08a.oggstr"
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://hlrxntqf1bih"
+path="res://.godot/imported/192634__samulis__chimes-c3-pp-1.ogg-4811ec68841433267f0ec02e09f0b08a.oggvorbisstr"
 
 [deps]
 
 source_file="res://Sounds/chimes/192634__samulis__chimes-c3-pp-1.ogg"
-dest_files=[ "res://.import/192634__samulis__chimes-c3-pp-1.ogg-4811ec68841433267f0ec02e09f0b08a.oggstr" ]
+dest_files=["res://.godot/imported/192634__samulis__chimes-c3-pp-1.ogg-4811ec68841433267f0ec02e09f0b08a.oggvorbisstr"]
 
 [params]
 
 loop=false
 loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

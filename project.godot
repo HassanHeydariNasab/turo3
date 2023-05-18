@@ -6,12 +6,7 @@
 ;   [section] ; section goes between []
 ;   param=value ; assign values to parameters
 
-config_version=4
-
-_global_script_classes=[  ]
-_global_script_class_icons={
-
-}
+config_version=5
 
 [android]
 
@@ -21,8 +16,9 @@ modules="org/godotengine/godot/GodotPaymentV3"
 
 config/name="turo3"
 run/main_scene="res://Menu.tscn"
-config/icon="res://icon.png"
 config/quit_on_go_back=false
+config/features=PackedStringArray("4.0")
+config/icon="res://icon.png"
 boot_splash/auto_accept_quit=true
 boot_splash/quit_on_go_back=false
 
@@ -32,11 +28,11 @@ G="*res://Global.gd"
 
 [display]
 
-window/size/width=600
-window/size/height=1000
-window/handheld/orientation="portrait"
+window/size/viewport_width=600
+window/size/viewport_height=1000
 window/stretch/mode="viewport"
 window/stretch/aspect="keep_width"
+window/handheld/orientation="portrait"
 
 [importer_defaults]
 
@@ -47,7 +43,7 @@ texture={
 
 [locale]
 
-translations=PoolStringArray( "res://Translations/Translations.en.translation", "res://Translations/Translations.eo.translation" )
+translations=PackedStringArray("res://Translations/Translations.en.translation", "res://Translations/Translations.eo.translation")
 
 [physics]
 
@@ -55,6 +51,6 @@ common/physics_fps=40
 
 [rendering]
 
+environment/defaults/default_clear_color=Color(1, 1, 1, 1)
 quality/driver/driver_name="GLES2"
 vram_compression/import_etc=true
-environment/default_clear_color=Color( 1, 1, 1, 1 )

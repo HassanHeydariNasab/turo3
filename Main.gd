@@ -1,56 +1,58 @@
 extends Node2D
 
-onready var PrePart = $PrePart
-onready var MainCamera = $MainCamera
-onready var BG = $BG
-onready var Ground = $Ground
-onready var V_ScrollBar = $Canvas/V_ScrollBar
-onready var look_Ink = $Canvas/look_Ink
-onready var look_Ink_Increase = $Canvas/look_Ink/Increase
-onready var look_Height = $Canvas/look_Height
-onready var look_Record = $Canvas/look_Record
-onready var look_Record_Change = $Canvas/look_Record/Change
-onready var Parts = $Parts
-onready var Inks = $Inks
-onready var Rectangles = $Rectangles
-onready var Dividers = $Dividers
-onready var BG_Change = $BG/Change
-onready var T500 = $T500
-onready var T30000 = $T30000
-onready var BG_music  = $BG_music
-onready var C3_spiccato = $C3_spiccato
-onready var C5_spiccato = $C5_spiccato
-onready var E3_spiccato = $E3_spiccato
-onready var E5_spiccato = $E5_spiccato
-onready var G3_spiccato = $G3_spiccato
-onready var G5_spiccato = $G5_spiccato
-onready var B3_spiccato = $B3_spiccato
-onready var B5_spiccato = $B5_spiccato
-onready var C3_pizzicato = $C3_pizzicato
-onready var C5_pizzicato = $C5_pizzicato
-onready var E3_tremolo = $E3_tremolo
-onready var G3_tremolo = $G3_tremolo
-onready var E3_timpani = $E3_timpani
-onready var C3_chimes = $C3_chimes
-onready var C4_chimes = $C4_chimes
-onready var Crash_14 = $Crash_14
-onready var Hit_6 = $Hit_6
-onready var Growth_sound  = $Growth_sound
-onready var Divider_sound  = $Divider_sound
-onready var Ink1_sound  = $Ink1_sound
-onready var Ink2_sound  = $Ink2_sound
-onready var Ink3_sound  = $Ink3_sound
-onready var Ink4_sound  = $Ink4_sound
-onready var Ink5_sound  = $Ink5_sound
-onready var D6_pizzicato = $D6_pizzicato
-#onready var FPS = $Canvas/FPS
-onready var Part = preload("res://Part.tscn")
-onready var Ink = preload("res://Ink.tscn")
-onready var Rectangle = preload("res://Rectangle.tscn")
-onready var Divider = preload("res://Divider.tscn")
+@onready var PrePart = $PrePart
+@onready var MainCamera = $MainCamera
+@onready var BG = $BG
+@onready var Ground = $Ground
+@onready var V_ScrollBar = $Canvas/V_ScrollBar
+@onready var look_Ink = $Canvas/look_Ink
+@onready var look_Ink_Increase = $Canvas/look_Ink/Increase
+@onready var look_Height = $Canvas/look_Height
+@onready var look_Record = $Canvas/look_Record
+@onready var look_Record_Change = $Canvas/look_Record/Change
+@onready var Parts = $Parts
+@onready var Inks = $Inks
+@onready var Rectangles = $Rectangles
+@onready var Dividers = $Dividers
+@onready var BG_Change = $BG/Change
+@onready var T500 = $T500
+@onready var T30000 = $T30000
+@onready var BG_music  = $BG_music
+@onready var C3_spiccato = $C3_spiccato
+@onready var C5_spiccato = $C5_spiccato
+@onready var E3_spiccato = $E3_spiccato
+@onready var E5_spiccato = $E5_spiccato
+@onready var G3_spiccato = $G3_spiccato
+@onready var G5_spiccato = $G5_spiccato
+@onready var B3_spiccato = $B3_spiccato
+@onready var B5_spiccato = $B5_spiccato
+@onready var C3_pizzicato = $C3_pizzicato
+@onready var C5_pizzicato = $C5_pizzicato
+@onready var E3_tremolo = $E3_tremolo
+@onready var G3_tremolo = $G3_tremolo
+@onready var E3_timpani = $E3_timpani
+@onready var C3_chimes = $C3_chimes
+@onready var C4_chimes = $C4_chimes
+@onready var Crash_14 = $Crash_14
+@onready var Hit_6 = $Hit_6
+@onready var Growth_sound  = $Growth_sound
+@onready var Divider_sound  = $Divider_sound
+@onready var Ink1_sound  = $Ink1_sound
+@onready var Ink2_sound  = $Ink2_sound
+@onready var Ink3_sound  = $Ink3_sound
+@onready var Ink4_sound  = $Ink4_sound
+@onready var Ink5_sound  = $Ink5_sound
+@onready var D6_pizzicato = $D6_pizzicato
+#@onready var FPS = $Canvas/FPS
+@onready var Part = preload("res://Part.tscn")
+@onready var Ink = preload("res://Ink.tscn")
+@onready var Rectangle = preload("res://Rectangle.tscn")
+@onready var Divider = preload("res://Divider.tscn")
+
+@onready var tween:Tween
 
 
-var height = 0 setget set_height
+var height = 0: set = set_height
 func set_height(value):
 	if value*0.1184 >= height:
 		height = round(value*0.1184)
@@ -64,18 +66,16 @@ func set_height(value):
 			look_Record.set_text(
 				str(G.Settings.get_value("Record", "record",0))+"m"
 			)
-			look_Record_Change.resume_all()
+			#look_Record_Change.resume_all()
 		else:
 			BG_music.set_volume_db(0)
 
-var ink setget set_ink
+var ink : set = set_ink
 func set_ink(value):
-	look_Ink_Increase.interpolate_property(
-		look_Ink, 'value', ink, value, 0.2, Tween.TRANS_QUAD, Tween.EASE_OUT
+	tween.tween_property(
+		look_Ink, 'value', int(value), 0.2
 	)
 	ink = int(value)
-	look_Ink_Increase.start()
-#	look_Ink.set_value(ink)
 
 var octave = 3
 
@@ -92,6 +92,7 @@ var bgcolor = 0
 
 func _ready():
 	G.Main = self
+	tween = create_tween()
 	self.ink = 100
 	self.height = 0
 	look_Record.set_text(
@@ -104,49 +105,48 @@ func _ready():
 	if G.Main.color == "ffffff":
 		$Ground/Look.set_color("ffffff")
 		$PrePart/Look.set_color("ffffff")
-		Infinity.set("custom_colors/font_color", "ffffff")
+		Infinity.set("theme_override_colors/font_color", "ffffff")
 	V_ScrollBar.set_min(-101000)
 	for i in range(-101000, -500, 700):
 		randomize()
-		var Rectangle_ = Rectangle.instance()
+		var Rectangle_ = Rectangle.instantiate()
 		Rectangle_.set_global_position(  #-- NOTE: Automatically converted by Godot 2 to 3 converter, please review
-			Vector2(rand_range(100,500),
+			Vector2(randf_range(100,500),
 			i
 		))
 		Rectangles.add_child(Rectangle_)
 	for i in range(-101000, 0, 250):
 		randomize()
-		var Ink_ = Ink.instance()
-		var ink_ = int(rand_range(50,200))
+		var Ink_ = Ink.instantiate()
+		var ink_ = int(randf_range(50,200))
 		Ink_.ink = ink_/2.85
 		Ink_.set_scale(Vector2(ink_/50, ink_/50))
 		Ink_.set_global_position(  #-- NOTE: Automatically converted by Godot 2 to 3 converter, please review
-			Vector2(rand_range(300-ink_,300+ink_),
+			Vector2(randf_range(300-ink_,300+ink_),
 			i
 		))
 		Inks.add_child(Ink_)
 	for i in range(-101000, -4000, 12000):
 		randomize()
-		var Divider_ = Divider.instance()
+		var Divider_ = Divider.instantiate()
 		Divider_.set_global_position(  #-- NOTE: Automatically converted by Godot 2 to 3 converter, please review
-			Vector2(300, i+rand_range(-2000,4000))
+			Vector2(300, i+randf_range(-2000,4000))
 		)
 		Dividers.add_child(Divider_)
 	BG_music.set("playing", G.Settings.get_value("audio", "music", true))
-	look_Record_Change.interpolate_property(look_Record,
-		"custom_colors/font_color", Color("ffffff"), Color("D500F9"), 0.25,
-		Tween.TRANS_SINE, Tween.EASE_OUT
+	# TODO: start from #fff
+	tween.tween_property(look_Record,
+		"theme_override_colors/font_color", Color("D500F9"), 0.25,
 	)
-	look_Record_Change.interpolate_property(look_Record,
-		"custom_colors/font_color", Color("D500F9"), Color("ffffff"), 0.25,
-		Tween.TRANS_SINE, Tween.EASE_OUT, 0.25
+	tween.tween_property(look_Record,
+		"theme_override_colors/font_color", Color("ffffff"), 0.25,
 	)
 	set_process_input(true)
 	set_physics_process(true)  #-- NOTE: Automatically converted by Godot 2 to 3 converter, please review
 
 func _input(event):
 	if event is InputEventMouseButton:  #-- NOTE: Automatically converted by Godot 2 to 3 converter, please review
-		if event.button_index == BUTTON_LEFT:
+		if event.button_index == MOUSE_BUTTON_LEFT:
 			if event.position.y > 70 and event.position.x < 570:  #-- NOTE: Automatically converted by Godot 2 to 3 converter, please review
 				if event.is_pressed() and ink > 0:
 					consumed_ink = 0
@@ -181,10 +181,10 @@ func _input(event):
 							elif height >= 2000:
 								E5_spiccato.set("playing", G.Settings.get_value("audio", "sounds", true))
 							octave = 3
-						var Part_ = Part.instance()
+						var Part_ = Part.instantiate()
 						Part_.set_global_position(PrePart.get_global_position())  #-- NOTE: Automatically converted by Godot 2 to 3 converter, please review
 						var Shape_ = RectangleShape2D.new()
-						Shape_.set_extents(Vector2(10,10)*PrePart.get_scale())
+						Shape_.size = Vector2(20,20)*PrePart.get_scale()
 						Part_.create_shape_owner(Shape_)
 						Part_.shape_owner_add_shape(0, Shape_)
 						Part_.set_mass(PrePart.get_scale().x/100)
@@ -196,9 +196,9 @@ func _input(event):
 						Growth_sound.stop()
 						self.ink += consumed_ink/2
 
-		elif event.button_index == BUTTON_WHEEL_UP:
+		elif event.button_index == MOUSE_BUTTON_WHEEL_UP:
 			V_ScrollBar.set_value(V_ScrollBar.get_value()-100)
-		elif event.button_index == BUTTON_WHEEL_DOWN:
+		elif event.button_index == MOUSE_BUTTON_WHEEL_DOWN:
 			V_ScrollBar.set_value(V_ScrollBar.get_value()+100)
 	elif event is InputEventMouseMotion:  #-- NOTE: Automatically converted by Godot 2 to 3 converter, please review
 		if event.position.y > 70 and event.position.x < 570:  #-- NOTE: Automatically converted by Godot 2 to 3 converter, please review
@@ -244,7 +244,7 @@ func _on_T500_timeout():
 	sum_speed_y = 0
 	parts = 1
 	for Part_ in Parts.get_children():
-		if Part_.get_collision_layer_bit(0):
+		if Part_.get_collision_layer_value(1):
 			speed = Part_.get_linear_velocity()
 			sum_speed_x += abs(speed.x)
 			sum_speed_y += abs(speed.y)
@@ -277,7 +277,7 @@ func _on_T500_timeout():
 			T500.stop()
 
 func _on_Back_pressed():
-	get_tree().change_scene("res://Menu.tscn")
+	get_tree().change_scene_to_file("res://Menu.tscn")
 
 func _on_T30000_timeout():
 	T500.start()

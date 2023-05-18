@@ -5,12 +5,12 @@
 [sub_resource type="RectangleShape2D" id=1]
 
 custom_solver_bias = 0.0
-extents = Vector2( 50, 50 )
+size = Vector2( 50, 50 )
 
 [sub_resource type="RectangleShape2D" id=2]
 
 custom_solver_bias = 0.0
-extents = Vector2( 490, 100 )
+size = Vector2( 490, 100 )
 
 [node name="Test" type="Node2D"]
 
@@ -29,7 +29,7 @@ bounce = 0.0
 gravity_scale = 1.0
 custom_integrator = false
 continuous_cd = 0
-contacts_reported = 1
+max_contacts_reported = 1
 contact_monitor = true
 sleeping = false
 can_sleep = false
@@ -44,17 +44,17 @@ shape = SubResource( 1 )
 
 [node name="Look" type="Polygon2D" parent="K" index="1"]
 
-polygon = PoolVector2Array( -50, -50, 50, -50, 50, 50, -50, 50 )
-uv = PoolVector2Array(  )
+polygon = PackedVector2Array( -50, -50, 50, -50, 50, 50, -50, 50 )
+uv = PackedVector2Array(  )
 color = Color( 0, 0, 0, 1 )
-vertex_colors = PoolColorArray(  )
+vertex_colors = PackedColorArray(  )
 offset = Vector2( 0, 0 )
 antialiased = false
 texture = null
 texture_offset = Vector2( 0, 0 )
 texture_scale = Vector2( 1, 1 )
 texture_rotation_degrees = 0.0
-invert_enable = false
+invert_enabled = false
 invert_border = 100.0
 
 [node name="G" type="StaticBody2D" parent="." index="1"]
@@ -75,17 +75,17 @@ shape = SubResource( 2 )
 
 [node name="Look" type="Polygon2D" parent="G" index="1"]
 
-polygon = PoolVector2Array( -160, 910, 820, 910, 820, 1110, -160, 1110 )
-uv = PoolVector2Array(  )
+polygon = PackedVector2Array( -160, 910, 820, 910, 820, 1110, -160, 1110 )
+uv = PackedVector2Array(  )
 color = Color( 0, 0, 0, 1 )
-vertex_colors = PoolColorArray(  )
+vertex_colors = PackedColorArray(  )
 offset = Vector2( 0, 0 )
 antialiased = false
 texture = null
 texture_offset = Vector2( 0, 0 )
 texture_scale = Vector2( 1, 1 )
 texture_rotation_degrees = 0.0
-invert_enable = false
+invert_enabled = false
 invert_border = 100.0
 
 [node name="Timer" type="Timer" parent="." index="2"]

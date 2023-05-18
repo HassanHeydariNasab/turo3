@@ -1,15 +1,19 @@
 [remap]
 
-importer="ogg_vorbis"
-type="AudioStreamOGGVorbis"
-path="res://.import/374428__samulis__viola-section-spiccato-b3-violas-spic-b2-v2-rr2.ogg-9d33cb41b01b94d88e331ec5d957f5c9.oggstr"
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://c3ooi10v5xqw5"
+path="res://.godot/imported/374428__samulis__viola-section-spiccato-b3-violas-spic-b2-v2-rr2.ogg-9d33cb41b01b94d88e331ec5d957f5c9.oggvorbisstr"
 
 [deps]
 
 source_file="res://Sounds/spiccato/374428__samulis__viola-section-spiccato-b3-violas-spic-b2-v2-rr2.ogg"
-dest_files=[ "res://.import/374428__samulis__viola-section-spiccato-b3-violas-spic-b2-v2-rr2.ogg-9d33cb41b01b94d88e331ec5d957f5c9.oggstr" ]
+dest_files=["res://.godot/imported/374428__samulis__viola-section-spiccato-b3-violas-spic-b2-v2-rr2.ogg-9d33cb41b01b94d88e331ec5d957f5c9.oggvorbisstr"]
 
 [params]
 
 loop=false
 loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

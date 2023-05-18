@@ -1,8 +1,8 @@
 extends Control
 
 
-onready var White = $White
-onready var Black = $Black
+@onready var White = $White
+@onready var Black = $Black
 
 func _ready():
 	get_tree().set_auto_accept_quit(false)
@@ -19,7 +19,7 @@ func _on_Music_toggled( b ):
 	G.Settings.save(G.settings_file)
 
 func _on_Back_pressed():
-	get_tree().change_scene("res://Menu.tscn")
+	get_tree().change_scene_to_file("res://Menu.tscn")
 
 
 func _on_Black_pressed():
@@ -35,7 +35,7 @@ func _on_White_pressed():
 	Black.set_pressed(false)
 
 func _on_Language_pressed():
-	get_tree().change_scene("res://Language.tscn")
+	get_tree().change_scene_to_file("res://Language.tscn")
 
 func _on_About_pressed():
-	get_tree().change_scene("res://About.tscn")
+	get_tree().change_scene_to_file("res://About.tscn")

@@ -1,0 +1,16 @@
+[remap]
+
+importer="font_data_bmfont"
+type="FontFile"
+uid="uid://uqbsy3k2ayaw"
+path="res://.godot/imported/jomhuria.font-c23b97683e33a271adeef1a849dc60d6.fontdata"
+
+[deps]
+
+source_file="res://Fonts/jomhuria.font"
+dest_files=["res://.godot/imported/jomhuria.font-c23b97683e33a271adeef1a849dc60d6.fontdata"]
+
+[params]
+
+fallbacks=[]
+compress=true

@@ -16,13 +16,13 @@ var colors = {
 var colors_order = ["Red", "Amber", "Green", "Blue", "Violet"]
 
 func _notification(what):
-	if what == MainLoop.NOTIFICATION_WM_QUIT_REQUEST:
+	if what == NOTIFICATION_WM_CLOSE_REQUEST:
 		if get_tree().get_current_scene().get_name() == "Menu":
 			get_tree().quit()
 		elif get_tree().get_current_scene().get_name() == "Language" and not G.is_language_selected:
 			pass
 		else:
-			get_tree().change_scene("res://Menu.tscn")
+			get_tree().change_scene_to_file("res://Menu.tscn")
 
 func _ready():
 	Settings.load(settings_file)

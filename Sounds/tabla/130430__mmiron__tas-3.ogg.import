@@ -1,15 +1,19 @@
 [remap]
 
-importer="ogg_vorbis"
-type="AudioStreamOGGVorbis"
-path="res://.import/130430__mmiron__tas-3.ogg-59f4f21b8bb1cdbc45903236f0e748f5.oggstr"
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cmapub0g3b12s"
+path="res://.godot/imported/130430__mmiron__tas-3.ogg-59f4f21b8bb1cdbc45903236f0e748f5.oggvorbisstr"
 
 [deps]
 
 source_file="res://Sounds/tabla/130430__mmiron__tas-3.ogg"
-dest_files=[ "res://.import/130430__mmiron__tas-3.ogg-59f4f21b8bb1cdbc45903236f0e748f5.oggstr" ]
+dest_files=["res://.godot/imported/130430__mmiron__tas-3.ogg-59f4f21b8bb1cdbc45903236f0e748f5.oggvorbisstr"]
 
 [params]
 
 loop=false
 loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

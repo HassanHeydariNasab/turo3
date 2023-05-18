@@ -1,15 +1,19 @@
 [remap]
 
-importer="ogg_vorbis"
-type="AudioStreamOGGVorbis"
-path="res://.import/465832__joesh2__hit-6.ogg-e7dd81502ddc9cea8c54b5f01762fdc2.oggstr"
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://blrvfgwjjwf8w"
+path="res://.godot/imported/465832__joesh2__hit-6.ogg-e7dd81502ddc9cea8c54b5f01762fdc2.oggvorbisstr"
 
 [deps]
 
 source_file="res://Sounds/drums/465832__joesh2__hit-6.ogg"
-dest_files=[ "res://.import/465832__joesh2__hit-6.ogg-e7dd81502ddc9cea8c54b5f01762fdc2.oggstr" ]
+dest_files=["res://.godot/imported/465832__joesh2__hit-6.ogg-e7dd81502ddc9cea8c54b5f01762fdc2.oggvorbisstr"]
 
 [params]
 
 loop=false
 loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

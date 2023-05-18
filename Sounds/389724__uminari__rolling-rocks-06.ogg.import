@@ -1,15 +1,19 @@
 [remap]
 
-importer="ogg_vorbis"
-type="AudioStreamOGGVorbis"
-path="res://.import/389724__uminari__rolling-rocks-06.ogg-b208af7fc2a91e2e2b61b0ad601621b0.oggstr"
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cbnaua2kkwdb3"
+path="res://.godot/imported/389724__uminari__rolling-rocks-06.ogg-b208af7fc2a91e2e2b61b0ad601621b0.oggvorbisstr"
 
 [deps]
 
 source_file="res://Sounds/389724__uminari__rolling-rocks-06.ogg"
-dest_files=[ "res://.import/389724__uminari__rolling-rocks-06.ogg-b208af7fc2a91e2e2b61b0ad601621b0.oggstr" ]
+dest_files=["res://.godot/imported/389724__uminari__rolling-rocks-06.ogg-b208af7fc2a91e2e2b61b0ad601621b0.oggvorbisstr"]
 
 [params]
 
 loop=false
 loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

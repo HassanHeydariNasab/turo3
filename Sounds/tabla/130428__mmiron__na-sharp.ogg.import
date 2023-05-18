@@ -1,15 +1,19 @@
 [remap]
 
-importer="ogg_vorbis"
-type="AudioStreamOGGVorbis"
-path="res://.import/130428__mmiron__na-sharp.ogg-e94427beb9307232ebbb1ff886ea521a.oggstr"
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://cr87m6iwuyiuk"
+path="res://.godot/imported/130428__mmiron__na-sharp.ogg-e94427beb9307232ebbb1ff886ea521a.oggvorbisstr"
 
 [deps]
 
 source_file="res://Sounds/tabla/130428__mmiron__na-sharp.ogg"
-dest_files=[ "res://.import/130428__mmiron__na-sharp.ogg-e94427beb9307232ebbb1ff886ea521a.oggstr" ]
+dest_files=["res://.godot/imported/130428__mmiron__na-sharp.ogg-e94427beb9307232ebbb1ff886ea521a.oggvorbisstr"]
 
 [params]
 
 loop=false
 loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

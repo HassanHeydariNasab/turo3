@@ -1,15 +1,19 @@
 [remap]
 
-importer="ogg_vorbis"
-type="AudioStreamOGGVorbis"
-path="res://.import/362106__aptbr__piano-improvisation.ogg-183bbe093ee475933aeb0d46bddf040d.oggstr"
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://dcau5y57aqn10"
+path="res://.godot/imported/362106__aptbr__piano-improvisation.ogg-183bbe093ee475933aeb0d46bddf040d.oggvorbisstr"
 
 [deps]
 
 source_file="res://Musics/362106__aptbr__piano-improvisation.ogg"
-dest_files=[ "res://.import/362106__aptbr__piano-improvisation.ogg-183bbe093ee475933aeb0d46bddf040d.oggstr" ]
+dest_files=["res://.godot/imported/362106__aptbr__piano-improvisation.ogg-183bbe093ee475933aeb0d46bddf040d.oggvorbisstr"]
 
 [params]
 
 loop=true
 loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

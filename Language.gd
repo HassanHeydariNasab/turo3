@@ -9,10 +9,10 @@ func _on_EO_pressed():
 	G.Settings.set_value("language", "language", "eo")
 	G.Settings.save(G.settings_file)
 	G.is_language_selected = true
-	get_tree().change_scene("res://Menu.tscn")
+	get_tree().change_scene_to_file("res://Menu.tscn")
 
 func _on_EN_pressed():
 	G.Settings.set_value("language", "language", "en")
 	G.Settings.save(G.settings_file)
 	G.is_language_selected = true
-	get_tree().change_scene("res://Menu.tscn")
+	get_tree().change_scene_to_file("res://Menu.tscn")

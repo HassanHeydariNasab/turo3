@@ -1,15 +1,19 @@
 [remap]
 
-importer="ogg_vorbis"
-type="AudioStreamOGGVorbis"
-path="res://.import/374487__samulis__viola-section-tremolo-f-3-violas-trem-g2-v2-rr1.ogg-e0025ecfee198ea3b0ef40a2ebbce5ea.oggstr"
+importer="oggvorbisstr"
+type="AudioStreamOggVorbis"
+uid="uid://47cpjhj0mqa"
+path="res://.godot/imported/374487__samulis__viola-section-tremolo-f-3-violas-trem-g2-v2-rr1.ogg-e0025ecfee198ea3b0ef40a2ebbce5ea.oggvorbisstr"
 
 [deps]
 
 source_file="res://Sounds/tremolo/374487__samulis__viola-section-tremolo-f-3-violas-trem-g2-v2-rr1.ogg"
-dest_files=[ "res://.import/374487__samulis__viola-section-tremolo-f-3-violas-trem-g2-v2-rr1.ogg-e0025ecfee198ea3b0ef40a2ebbce5ea.oggstr" ]
+dest_files=["res://.godot/imported/374487__samulis__viola-section-tremolo-f-3-violas-trem-g2-v2-rr1.ogg-e0025ecfee198ea3b0ef40a2ebbce5ea.oggvorbisstr"]
 
 [params]
 
 loop=false
 loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

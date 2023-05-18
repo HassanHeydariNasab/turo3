@@ -6,12 +6,12 @@ const SERVER = 'https://nishe.ir/poento'
 var skip = 0
 const LIMIT = 6
 
-onready var ScoreList_index = $ScoreList_index
-onready var ScoreList_name = $ScoreList_name
-onready var ScoreList_value = $ScoreList_value
+@onready var ScoreList_index = $ScoreList_index
+@onready var ScoreList_name = $ScoreList_name
+@onready var ScoreList_value = $ScoreList_value
 
-onready var Next = $Next
-onready var Previous = $Previous
+@onready var Next = $Next
+@onready var Previous = $Previous
 
 
 func _ready():
@@ -33,7 +33,7 @@ func _on_Submit_pressed():
 
 func submit():
 	var headers = ['Content-Type: application/json']
-	var query = JSON.print({'country': 'IR', 'name': $Form/Name.get_text(), 'value': G.Settings.get_value("Record", "record", 0)})
+	var query = JSON.stringify({'country': 'IR', 'name': $Form/Name.get_text(), 'value': G.Settings.get_value("Record", "record", 0)})
 	$HTTPRequest_Submit.request(SERVER+'/v1/scores', headers, false, HTTPClient.METHOD_POST, query)
 
 
@@ -44,8 +44,8 @@ func fetch():
 	)
 
 
-onready var Result_already_submitted = $Result_already_submitted
-onready var Form = $Form
+@onready var Result_already_submitted = $Result_already_submitted
+@onready var Form = $Form
 func _on_HTTPRequest_Submit_request_completed( result, response_code, headers, body ):
 	print(response_code)
 	if response_code == 201:
@@ -62,7 +62,9 @@ func _on_HTTPRequest_Submit_request_completed( result, response_code, headers, b
 func _on_HTTPRequest_Fetch_request_completed(result, response_code, headers, body):
 	print(response_code)
 	if response_code == 200:
-		var json = JSON.parse(body.get_string_from_utf8())
+		var test_json_conv = JSON.new()
+		test_json_conv.parse(body.get_string_from_utf8())
+		var json = test_json_conv.get_data()
 		var scores = json.result['scores']
 		ScoreList_index.clear()
 		ScoreList_name.clear()
@@ -78,7 +80,7 @@ func _on_HTTPRequest_Fetch_request_completed(result, response_code, headers, bod
 
 
 func _on_Back_pressed():
-	get_tree().change_scene("res://Menu.tscn")
+	get_tree().change_scene_to_file("res://Menu.tscn")
 
 
 func _on_Next_pressed():

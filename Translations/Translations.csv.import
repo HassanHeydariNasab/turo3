@@ -2,13 +2,14 @@
 
 importer="csv_translation"
 type="Translation"
+uid="uid://dyovdfwwqq3qk"
 
 [deps]
 
-files=[ "res://Translations/Translations.eo.translation", "res://Translations/Translations.en.translation" ]
+files=["res://Translations/Translations.eo.translation", "res://Translations/Translations.en.translation"]
 
 source_file="res://Translations/Translations.csv"
-dest_files=[ "res://Translations/Translations.eo.translation", "res://Translations/Translations.en.translation" ]
+dest_files=["res://Translations/Translations.eo.translation", "res://Translations/Translations.en.translation"]
 
 [params]
 
