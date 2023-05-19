@@ -89,6 +89,8 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = ExtResource("2_uu6rs")
 theme_override_font_sizes/font_size = 96
 text = "Here is the end of infinity"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Dividers" type="Node2D" parent="."]
 
@@ -158,16 +160,6 @@ theme_override_colors/font_color = Color(1, 1, 1, 1)
 max_value = 1000.0
 value = 100.0
 show_percentage = false
-
-[node name="Label" type="Label" parent="Canvas/look_Ink"]
-layout_mode = 0
-offset_right = 750.0
-offset_bottom = 132.0
-scale = Vector2(0.6, 0.6)
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_fonts/font = ExtResource("2_uu6rs")
-theme_override_font_sizes/font_size = 96
-text = "X2"
 
 [node name="look_Record" type="Label" parent="Canvas"]
 offset_left = 304.0

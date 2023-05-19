@@ -1,1 +1,11 @@
 res://About.tscn
+res://Settings.tscn
+res://Language.tscn
+res://Ink.tscn
+res://Part.tscn
+res://Divider.tscn
+res://Main.tscn
+res://Translations/Translations.en.translation
+res://Ink.gd
+res://Divider.gd
+res://Main.gd

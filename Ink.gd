@@ -42,8 +42,7 @@ func _on_Hide_tween_completed():
 
 func _on_Ink_area_entered( area ):
 	if area.get_collision_layer_value(1) == true:
-		#queue_free()
-		pass
+		queue_free()
 
 
 func _on_x2_body_entered(body):
@@ -52,14 +51,15 @@ func _on_x2_body_entered(body):
 		multiply_by = 2
 		x2_Label.show()
 		tween = create_tween()
-		tween.tween_property(x2_Label, "modulate", Color("ffffff",1), 0.3).from(Color("ffffff", 0))
-		tween.tween_property(x2_Label, "modulate", Color("ffffff",0), 0.3).set_delay(2.3+randf_range(0, 1)).from(Color("ffffffff"))
+		tween.tween_property(x2_Label, "modulate", Color("ffffff",1), 0.3).from(
+				Color("ffffff", 0))
+		G.Main.D6_pizzicato.play()
+		tween.tween_property(x2_Label, "modulate", Color("ffffff",0), 0.3).set_delay(
+				2.3+randf_range(0, 1)).from(Color("ffffff",1))
+		tween.tween_callback(_on_FadeOut_tween_completed)
 
 
 func _on_FadeOut_tween_completed(object, key):
 	multiply_by = 1
 	x2.queue_free()
 
-
-func _on_FadeIn_tween_completed(object, key):
-	G.Main.D6_pizzicato.play()
