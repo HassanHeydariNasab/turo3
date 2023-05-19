@@ -15,11 +15,10 @@ func _on_Divider_body_entered( body ):
 	G.Main.Ground.set_global_position(Vector2(300,get_global_position().y-880))  #-- NOTE: Automatically converted by Godot 2 to 3 converter, please review
 
 	G.Main.bgcolor = (G.Main.bgcolor+1) % G.colors_order.size()
-	G.Main.BG_Change.interpolate_property(
+	G.Main.tween.tween_property(
 		G.Main.BG, "color",
-		G.Main.BG.get_color(),
+		#G.Main.BG.get_color(),
 		Color(G.colors[G.colors_order[G.Main.bgcolor]]), 0.3,
-		Tween.TRANS_QUAD, Tween.EASE_IN
+		#Tween.TRANS_QUAD, Tween.EASE_IN
 	)
-	G.Main.BG_Change.start()
 	queue_free()

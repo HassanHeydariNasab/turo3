@@ -6,15 +6,12 @@ extends Node2D
 @onready var Ground = $Ground
 @onready var V_ScrollBar = $Canvas/V_ScrollBar
 @onready var look_Ink = $Canvas/look_Ink
-@onready var look_Ink_Increase = $Canvas/look_Ink/Increase
 @onready var look_Height = $Canvas/look_Height
 @onready var look_Record = $Canvas/look_Record
-@onready var look_Record_Change = $Canvas/look_Record/Change
 @onready var Parts = $Parts
 @onready var Inks = $Inks
 @onready var Rectangles = $Rectangles
 @onready var Dividers = $Dividers
-@onready var BG_Change = $BG/Change
 @onready var T500 = $T500
 @onready var T30000 = $T30000
 @onready var BG_music  = $BG_music
@@ -72,9 +69,10 @@ func set_height(value):
 
 var ink : set = set_ink
 func set_ink(value):
-	tween.tween_property(
-		look_Ink, 'value', int(value), 0.2
-	)
+	#tween.tween_property(
+	#	look_Ink, 'value', int(value), 0.2
+	#)
+	look_Ink.set_value(value)
 	ink = int(value)
 
 var octave = 3
@@ -83,7 +81,7 @@ var color = "000000"
 
 var rectangle = false
 
-var overlaps = []
+var overlaps = [] # overlapped physic bodies
 
 var consumed_ink = 0
 
@@ -282,15 +280,9 @@ func _on_Back_pressed():
 func _on_T30000_timeout():
 	T500.start()
 
-func _on_look_Record_Change_tween_step( object, key, elapsed, value ):
-	if elapsed == 0.5:
-		look_Record_Change.stop_all()
-
 func _on_PrePart_body_entered( body ):
 	overlaps.append(body)
 
 func _on_PrePart_body_exited( body ):
 	overlaps.erase(body)
 
-func _on_BG_Change_tween_completed( object, key ):
-	BG_Change.remove_all()
