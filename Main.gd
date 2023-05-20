@@ -46,8 +46,6 @@ extends Node2D
 @onready var Rectangle = preload("res://Rectangle.tscn")
 @onready var Divider = preload("res://Divider.tscn")
 
-@onready var tween:Tween
-
 
 var height = 0: set = set_height
 func set_height(value):
@@ -63,16 +61,22 @@ func set_height(value):
 			look_Record.set_text(
 				str(G.Settings.get_value("Record", "record",0))+"m"
 			)
-			#look_Record_Change.resume_all()
+			var tween = create_tween()
+			tween.tween_property(look_Record,
+				"theme_override_colors/font_color", Color("D500F9"), 0.25,
+			).from(Color("FFFFFF"))
+			tween.tween_property(look_Record,
+				"theme_override_colors/font_color", Color("ffffff"), 0.25,
+			)
 		else:
 			BG_music.set_volume_db(0)
 
 var ink : set = set_ink
 func set_ink(value):
-	#tween.tween_property(
-	#	look_Ink, 'value', int(value), 0.2
-	#)
-	look_Ink.set_value(value)
+	var tween = create_tween()
+	tween.tween_property(
+		look_Ink, 'value', int(value), 0.1
+	).set_ease(Tween.EASE_OUT)
 	ink = int(value)
 
 var octave = 3
@@ -90,7 +94,6 @@ var bgcolor = 0
 
 func _ready():
 	G.Main = self
-	tween = create_tween()
 	self.ink = 100
 	self.height = 0
 	look_Record.set_text(
@@ -132,13 +135,6 @@ func _ready():
 		)
 		Dividers.add_child(Divider_)
 	BG_music.set("playing", G.Settings.get_value("audio", "music", true))
-	# TODO: start from #fff
-	tween.tween_property(look_Record,
-		"theme_override_colors/font_color", Color("D500F9"), 0.25,
-	)
-	tween.tween_property(look_Record,
-		"theme_override_colors/font_color", Color("ffffff"), 0.25,
-	)
 	set_process_input(true)
 	set_physics_process(true)  #-- NOTE: Automatically converted by Godot 2 to 3 converter, please review
 

@@ -2,7 +2,6 @@ extends Area2D
 
 @onready var x2 = $x2
 @onready var x2_Label = $x2/Label
-var tween: Tween
 
 
 var ink = 100
@@ -29,18 +28,16 @@ func _on_Ink_body_entered( body ):
 		G.Main.Ink2_sound.set("playing", G.Settings.get_value("audio", "sounds", true))
 	elif ink <= 30:
 		G.Main.Ink1_sound.set("playing", G.Settings.get_value("audio", "sounds", true))
-	tween = create_tween()
+	G.Main.ink += (self.ink * multiply_by)
+	var tween = create_tween()
 	tween.tween_property($Look, "color",
 		Color("D500F9"), 0.25,
-	).from(Color("ffffff"))
-	tween.tween_callback(_on_Hide_tween_completed)
-
-func _on_Hide_tween_completed():
-	G.Main.ink += (self.ink * multiply_by)
-	queue_free()
+	)
+	tween.tween_callback(queue_free)
 
 
 func _on_Ink_area_entered( area ):
+	# remove overlapped items
 	if area.get_collision_layer_value(1) == true:
 		queue_free()
 
@@ -50,7 +47,7 @@ func _on_x2_body_entered(body):
 	if (not x2_Label.is_visible_in_tree()) and can_multiply:
 		multiply_by = 2
 		x2_Label.show()
-		tween = create_tween()
+		var tween = create_tween()
 		tween.tween_property(x2_Label, "modulate", Color("ffffff",1), 0.3).from(
 				Color("ffffff", 0))
 		G.Main.D6_pizzicato.play()
