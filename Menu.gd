@@ -2,9 +2,7 @@ extends Control
 
 
 func _init():
-	var language = G.Settings.get_value("language", "language", 'en')
-	if TranslationServer.get_locale() != language:
-		TranslationServer.set_locale(language)
+	pass
 
 func _ready():
 	get_tree().set_auto_accept_quit(false)

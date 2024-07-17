@@ -1,6 +1,17 @@
+res://About.tscn
+res://About.gd
 res://Settings.tscn
 res://Ink.tscn
 res://Part.tscn
 res://Divider.tscn
 res://Main.tscn
 res://Menu.tscn
+res://Settings.gd
+res://Language.tscn
+res://Menu.gd
+res://Main.gd
+res://Rectangle.tscn
+res://Divider.gd
+res://Rectangle.gd
+res://Ink.gd
+res://Part.gd

@@ -55,3 +55,7 @@ textures/vram_compression/import_etc2_astc=true
 environment/defaults/default_clear_color=Color(1, 1, 1, 1)
 quality/driver/driver_name="GLES2"
 vram_compression/import_etc=true
+
+[xr]
+
+openxr/defaults/default_clear_color=Color(1, 1, 1, 1)
