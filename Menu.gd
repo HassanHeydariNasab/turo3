@@ -12,9 +12,6 @@ func _ready():
 func _on_Play_pressed():
 	get_tree().change_scene_to_file("res://Main.tscn")
 
-func _on_Highscores_pressed():
-	get_tree().change_scene_to_file("res://Highscores.tscn")
-
 func _on_Settings_pressed():
 	get_tree().change_scene_to_file("res://Settings.tscn")
 

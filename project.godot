@@ -14,10 +14,10 @@ modules="org/godotengine/godot/GodotPaymentV3"
 
 [application]
 
-config/name="turo3"
+config/name="turo"
 run/main_scene="res://Menu.tscn"
 config/quit_on_go_back=false
-config/features=PackedStringArray("4.0")
+config/features=PackedStringArray("4.3")
 config/icon="res://icon.png"
 boot_splash/auto_accept_quit=true
 boot_splash/quit_on_go_back=false
@@ -32,7 +32,7 @@ window/size/viewport_width=600
 window/size/viewport_height=1000
 window/stretch/mode="viewport"
 window/stretch/aspect="keep_width"
-window/handheld/orientation="portrait"
+window/handheld/orientation=1
 
 [importer_defaults]
 
@@ -51,6 +51,7 @@ common/physics_fps=40
 
 [rendering]
 
+textures/vram_compression/import_etc2_astc=true
 environment/defaults/default_clear_color=Color(1, 1, 1, 1)
 quality/driver/driver_name="GLES2"
 vram_compression/import_etc=true

@@ -4,9 +4,9 @@
 
 [node name="Part" type="RigidBody2D"]
 collision_layer = 1024
-max_contacts_reported = 1
-contact_monitor = true
 can_sleep = false
+contact_monitor = true
+max_contacts_reported = 1
 script = ExtResource("1")
 
 [node name="Look" type="Polygon2D" parent="."]

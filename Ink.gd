@@ -56,7 +56,6 @@ func _on_x2_body_entered(body):
 		tween.tween_callback(_on_FadeOut_tween_completed)
 
 
-func _on_FadeOut_tween_completed(object, key):
+func _on_FadeOut_tween_completed():
 	multiply_by = 1
 	x2.queue_free()
-

@@ -121,7 +121,7 @@ func _ready():
 		var Ink_ = Ink.instantiate()
 		var ink_ = int(randf_range(50,200))
 		Ink_.ink = ink_/2.85
-		Ink_.set_scale(Vector2(ink_/50, ink_/50))
+		Ink_.set_scale(Vector2(ink_/50.0, ink_/50.0))
 		Ink_.set_global_position(  #-- NOTE: Automatically converted by Godot 2 to 3 converter, please review
 			Vector2(randf_range(300-ink_,300+ink_),
 			i
@@ -281,4 +281,3 @@ func _on_PrePart_body_entered( body ):
 
 func _on_PrePart_body_exited( body ):
 	overlaps.erase(body)
-

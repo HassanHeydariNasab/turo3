@@ -6,4 +6,5 @@ fastlane/metadata/android/en-US/images/phoneScreenshots/*.import
 .directory
 *~
 
-build/
+builds/
+android/
